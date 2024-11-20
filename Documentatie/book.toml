@@ -1,0 +1,6 @@
+[book]
+authors = ["JurOtten"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Connectivity_book"
