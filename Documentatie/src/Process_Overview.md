@@ -1,7 +1,7 @@
 # Process Overview
 ```
 @startuml
-title Factory Line: Process Overview
+title Factory Line: Process Overview with SCADA Integration
 
 ' Stations in the production line
 [Distributing Station] --> [Measuring Station 2.0] : Processed Materials
@@ -13,32 +13,32 @@ title Factory Line: Process Overview
 note right of [Distributing Station]
 - Distributes raw materials.
 - Components: Conveyors, sensors, actuators.
-- Interfaces: Modbus, EtherCAT.
+- Interfaces: SCADA, Modbus, EtherCAT.
 end note
 
 note right of [Measuring Station 2.0]
 - Measures size, weight, etc.
 - Components: Measurement tools, PLCs.
-- Interfaces: IO-Link, Modbus.
+- Interfaces: SCADA, IO-Link, Modbus.
 end note
 
 note right of [Sorting Station]
 - Sorts products by type/quality.
 - Components: Sorting mechanisms, classification sensors.
-- Interfaces: IO-Link, Modbus.
+- Interfaces: SCADA, IO-Link, Modbus.
 end note
 
 note right of [Packaging Station (LFT Handling Mechanism)]
 - Packages sorted products.
 - Inputs: Sorted Products, Packaging Materials.
 - Outputs: Packaged Units.
-- Interfaces: SCADA, Ethernet.
+- Interfaces: SCADA, IO-Link.
 end note
 
 note right of [Storage Station]
 - Stores finished packaged products.
 - Components: Shelving, conveyor belts.
-- Interfaces: Modbus, EtherCAT.
+- Interfaces: SCADA, Modbus, EtherCAT.
 end note
 
 @enduml
